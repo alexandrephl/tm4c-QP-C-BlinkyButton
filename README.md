@@ -9,15 +9,15 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 
 ## 📂 Repository Layout
 
-|
-├── Application/                 # Your application logic (main, bsp)<br>
-|
-├── CMSIS/Include/               # CMSIS core headers<br>
-|
-├── ek-tm4c123gxl/               # Board/Microcontroller-specific files<br>
-|
-├── QPC/                         # QP/C framework + QXK port files<br>
-|
-├── targetConfig/                # Target Configurations<br>
+|  
+├── Application/                 # Your application logic (main, bsp)  
+|  
+├── CMSIS/Include/               # CMSIS core headers  
+|  
+├── ek-tm4c123gxl/               # Board/Microcontroller-specific files  
+|  
+├── QPC/                         # QP/C framework + QXK port files  
+|  
+├── targetConfig/                # Target Configurations  
 
 
