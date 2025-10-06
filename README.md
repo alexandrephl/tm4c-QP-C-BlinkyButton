@@ -12,7 +12,7 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 |  
 ├── Application/                 # Your application logic (main, bsp)  
 |  
-├── CMSIS/Include/               # CMSIS core headers  
+├── CMSIS/               		 # CMSIS core headers  
 |  
 ├── ek-tm4c123gxl/               # Board/Microcontroller-specific files  
 |  
