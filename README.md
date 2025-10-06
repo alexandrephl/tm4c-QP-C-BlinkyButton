@@ -47,3 +47,9 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 3. **Linker script (if needed)**: select the one under `ek-tm4c123gxl` or your custom `.cmd`  
 4. **Build and flash** — connect the LaunchPad, flash via CCS.
 
+## 📄 License & Credits
+
+	•	Licensed under MIT, see LICENSE file
+	•	Portions of this project are adapted from Miro Samek’s QP/C lessons; used here for study and extension
+	•	This project uses a **reduced version** of the [QP/C Real-Time Embedded Framework](https://www.state-machine.com/products/qp) from Quantum Leaps, licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).
+
