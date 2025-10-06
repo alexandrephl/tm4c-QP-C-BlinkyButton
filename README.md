@@ -34,6 +34,10 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 
 1. **Import project**:
    - `File → Import CCS Projects` → point to repo root
+2. **Tivaware path setting**:
+	-When prompted, set build variable in Project Properties → C/C++ Build → Build Variables:
+		•	Name: TIVAWARE_ROOT
+		•	Value: your TivaWare path (e.g. C:/ti/TivaWare_C_Series-2.2.0.295)
 2. **Include path setup**:
    - Add paths in Project Properties → CCS Build → GNU Compiler → Directories:
      ```
