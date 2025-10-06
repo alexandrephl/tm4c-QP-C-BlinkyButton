@@ -53,3 +53,7 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 	•	Portions of this project are adapted from Miro Samek’s QP/C lessons; used here for study and extension
 	•	This project uses a **reduced version** of the [QP/C Real-Time Embedded Framework](https://www.state-machine.com/products/qp) from Quantum Leaps, licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).
 
+## ✨ Author
+**Alexandre Panhaleux**  
+Embedded Software Engineer  
+[GitHub: @alexandrephl](https://github.com/alexandrephl)
