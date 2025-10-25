@@ -1,9 +1,15 @@
-/* Board Support Package (BSP) for the EK-TM4C123GXL board */
-#include "qpc.h"
-#include "bsp.h"
-#include "TM4C123GH6PM.h" /* the TM4C MCU Peripheral Access Layer (TI) */
+/******************************************************************************
+* @file    bsp.c
+* @brief   Board Support Package for EK-TM4C123GXL
+* @board   EK-TM4C123GXL (TM4C123GH6PM)
+* @author  Alexandre Panhaleux
+******************************************************************************/
+#include "qpc.h"            /* QPC API */
+#include "bsp.h"            /* Board Support Package */
+#include "TM4C123GH6PM.h"   /* the TM4C MCU Peripheral Access Layer (TI) */
 
-/* on-board LEDs */
+/* GPIOF pin bits ===============================================*/
+/* LEDs on the board */
 #define LED_RED   (1U << 1)
 #define LED_BLUE  (1U << 2)
 #define LED_GREEN (1U << 3)
@@ -13,6 +19,7 @@
 
 static uint32_t volatile l_tickCtr;
 
+/* Systick handler ISR application hooks ===============================================*/
 void SysTick_Handler(void) {
 
     QXK_ISR_ENTRY(); /* inform QXK about entering an ISR */
@@ -35,8 +42,7 @@ void GPIOPortF_IRQHandler(void) {
     QXK_ISR_EXIT(); /* inform QXK about exiting an ISR */
 }
 
-// --- BSP --------------------------------------------------------------------------------------
-
+/* BSP init ===========================================================*/
 void BSP_init(void) {
     SYSCTL->GPIOHBCTL |= (1U << 5); /* enable AHB for GPIOF */
     SYSCTL->RCGCGPIO  |= (1U << 5); /* enable Run Mode for GPIOF */
@@ -57,6 +63,7 @@ void BSP_init(void) {
     GPIOF_AHB->IM  |=  (BTN_SW1);    /* unmask interrupt */
 }
 
+/* LED helpers ===========================================================*/
 void BSP_ledRedOn(void) {
     GPIOF_AHB->DATA_Bits[LED_RED] = LED_RED;
 }
@@ -81,6 +88,7 @@ void BSP_ledGreenOff(void) {
     GPIOF_AHB->DATA_Bits[LED_GREEN] = 0U;
 }
 
+/* QF start/cleanup hooks ===========================================================*/
 void QF_onStartup(void){
     SystemCoreClockUpdate();
     SysTick_Config(SystemCoreClock / BSP_TICKS_PER_SEC);
@@ -104,7 +112,7 @@ void QXK_onIdle(void){
     //__WFI(); /* stop the CPU and Wait for interrupt */
 }
 
-//............................................................................
+/* Assertions ===========================================================*/
 _Noreturn void Q_onAssert(char const * const module, int const id) {
     (void)module; // unused parameter
     (void)id;     // unused parameter
@@ -117,7 +125,7 @@ _Noreturn void Q_onAssert(char const * const module, int const id) {
 #endif
     NVIC_SystemReset();
 }
-//............................................................................
+
 _Noreturn void assert_failed(char const * const module, int const id);
 _Noreturn void assert_failed(char const * const module, int const id) {
     Q_onAssert(module, id);

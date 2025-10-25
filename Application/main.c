@@ -1,3 +1,9 @@
+/******************************************************************************
+* @file    main.c
+* @brief   QP/C BlinkyButton example – cooperative threads using QXK on TM4C123
+* @board   EK-TM4C123GXL (TM4C123GH6PM)
+* @author  Alexandre Panhaleux
+******************************************************************************/
 #include <stdint.h>
 #include "qpc.h"
 #include "bsp.h"
@@ -5,7 +11,7 @@
 /* Binary semaphore signaled from the SW1 IRQ */
 QXSemaphore SW1_sema;
 
-// --- Thread 1: Green LED "busy work" -------------------------------------------------------
+/* Thread 1: Green LED "busy work" =========================================================*/
 static uint32_t stack_blinky1[40];
 static QXThread blinky1;
 
@@ -20,7 +26,7 @@ static void main_blinky1(QXThread * const me) {
     }
 }
 
-// --- Thread 2: Blue LED burst when botton is switched ---------------------
+/* Thread 2: Blue LED burst when botton is switched =========================================================*/
 static uint32_t stack_blinky2[40];
 static QXThread blinky2;
 
@@ -39,6 +45,7 @@ static void main_blinky2(QXThread * const me) {
     }
 }
 
+/* the main function =========================================================*/
 int main(void) {
     BSP_init();
     QF_init();
