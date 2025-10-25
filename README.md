@@ -3,7 +3,7 @@
 ![Demo Screenshot or Board Photo](img/pic_board.jpg)
 
 A compact embedded RTOS example on the **EK-TM4C123GXL** (Cortex-M4F) using the **QP/C framework (QXK kernel)**.  
-It demonstrates interrupt-based event signaling, thread synchronization via semaphores, and basic LED control.
+It blinks the green LED continuously while responding to SW1 presses by flashing the blue LED briefly, demonstrating interrupt-based event signaling, thread synchronization via semaphores, and basic LED control.
 
 ---
 
