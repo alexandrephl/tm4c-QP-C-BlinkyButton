@@ -28,9 +28,10 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 
 - **Code Composer Studio (CCS)** or GCC ARM toolchain  
 - **TivaWare SDK** (not included in repo)  
-- **QP/C** is included under `QPC/` in this repo  
+- **QP/C** is included under `QPC/` in this repo
+- CMSIS headers (either from this repo or your local installation)  
 
-### Importing in CCS
+### To Build:  
 
 1. **Import project**:
    - `File → Import CCS Projects` → point to repo root
@@ -38,24 +39,14 @@ It demonstrates interrupt-based event signaling, thread synchronization via sema
 	-When prompted, set build variable in Project Properties → C/C++ Build → Build Variables:
 		•	Name: TIVAWARE_ROOT
 		•	Value: your TivaWare path (e.g. C:/ti/TivaWare_C_Series-2.2.0.295)
-2. **Include path setup**:
-   - Add paths in Project Properties → CCS Build → GNU Compiler → Directories:
-     ```
-     ${ProjDirPath}/Application
-     ${ProjDirPath}/CMSIS/include
-     ${ProjDirPath}/ek-tm4c123gxl
-     ${ProjDirPath}/QPC/include
-     ${ProjDirPath}/QPC/ports/arm-cm/qxk/gnu
-     /path/to/TivaWare
-     ```
-3. **Linker script (if needed)**: select the one under `ek-tm4c123gxl` or your custom `.cmd`  
-4. **Build and flash** — connect the LaunchPad, flash via CCS.
+3. **Build and flash** — connect the LaunchPad, flash via CCS.
+   		•	Connect the LaunchPad via USB
+		•	Click the debug icon or Run → Debug to flash and start execution.
 
 ## 📄 License & Credits
 
-	•	Licensed under MIT, see LICENSE file
-	•	Portions of this project are adapted from Miro Samek’s QP/C lessons; used here for study and extension
-	•	This project uses a **reduced version** of the [QP/C Real-Time Embedded Framework](https://www.state-machine.com/products/qp) from Quantum Leaps, licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).
+	- Main application code: MIT (see `LICENSE.txt`)
+	- Third-party components and their licenses: see `THIRD_PARTY_NOTICES
 
 ## ✨ Author
 **Alexandre Panhaleux**  
