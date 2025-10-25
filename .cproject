@@ -163,7 +163,7 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="tm4c-rtos-qpc-main.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.526324417" name="TMS470" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType"/>
+		<project id="tm4c-QP-C-BlinkyButton-main.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.526324417" name="TMS470" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
