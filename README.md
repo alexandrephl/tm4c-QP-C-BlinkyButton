@@ -7,7 +7,7 @@ It blinks the green LED continuously while responding to SW1 presses by flashing
 
 ---
 
-## 📂 Repository Layout
+## Repository Layout
 
 |  
 ├── Application/                 # Your application logic (main, bsp)  
@@ -22,7 +22,7 @@ It blinks the green LED continuously while responding to SW1 presses by flashing
 
 ---
 
-## 🛠 Build & Run Instructions
+## Build & Run Instructions
 
 ### Prerequisites
 
@@ -43,12 +43,12 @@ It blinks the green LED continuously while responding to SW1 presses by flashing
    		•	Connect the LaunchPad via USB
 		•	Click the debug icon or Run → Debug to flash and start execution.
 
-## 📄 License & Credits
+## License & Credits
 
 	- Main application code: MIT (see `LICENSE.txt`)
 	- Third-party components and their licenses: see `THIRD_PARTY_NOTICES
 
-## ✨ Author
+## Author
 **Alexandre Panhaleux**  
 Embedded Software Engineer  
 [GitHub: @alexandrephl](https://github.com/alexandrephl)
